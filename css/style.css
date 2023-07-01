@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+
+h1{
+    padding-top: 1rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.formulario{
+    padding-top: 2rem;
+}
+
+.mb-3 label{
+    padding-right: 2rem;
+}
+
+.card{
+    background-color: #e3f2fd; 
+}
+
+img{
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+}

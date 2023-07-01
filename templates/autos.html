@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <!-- place navbar here -->
+    </header>
+    <main>
+        <div id="app" class="container">
+            <h1>Venta de autos usados</h1>
+
+            <div v-if="error">
+                <p>Lo sentimos , ........</p>
+            </div>
+            <div v-else>
+                <section v-if="cargando">
+                    <div class="spinner-border"></div>
+                    <p>Cargando .....</p>
+                </section>
+                <section v-else>
+                        <div class="container text-white p-3">
+                            <a class="btn btn-primary" href="../templates/auto_nuevo.html">Nuevo</a>
+                            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 text-black">
+                                <div v-for="auto of autos" class="card" style="width: 18rem;">
+                                    <img :src="auto.imagen || 'https://img.freepik.com/vector-gratis/ilustracion-concepto-coche-delantero_114360-7978.jpg?w=2000'"
+                                        class="card-img-top" alt="Foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{auto.modelo}}</h5>
+                                        <p class="card-text">{{auto.anio}} | {{auto.km}} km</p>
+                                        <p class="card-text">{{auto.lugar}}</p>
+                                        <p class="card-text">${{auto.precio}} </p>
+                                        <a class="btn btn-secondary" :href="'./auto_update.html?id='+ auto.id">Editar</a>
+                                        <button type="button" class="btn btn-danger"
+                                            v-on:click="eliminar(auto.id)">Eliminar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <script>
+        <!--Link de Bootstrap-->
+        src = "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity = "sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin = "anonymous"</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
+    <script src="../js/autos.js"></script>
+</body>
+
+</html>
