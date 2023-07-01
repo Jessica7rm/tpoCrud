@@ -12,7 +12,7 @@ createApp({
             km: 0,
             lugar: "",
             imagen: "",
-            url: 'http://jessica7rm.pythonanywhere.com/autos/'+id,
+            url: 'https://jessica7rm.pythonanywhere.com/autos/'+id,
         }
     },
     methods: {
@@ -53,7 +53,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "../index.html";
+                    window.location.href = "./index.html";
                 })
                 .catch(err => {
                     console.error(err);
