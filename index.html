@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
                 </section>
                 <section v-else>
                         <div class="container text-white p-3">
-                            <a class="btn btn-primary" href="../templates/auto_nuevo.html">Nuevo</a>
+                            <a class="btn btn-primary" href="./auto_nuevo.html">Nuevo</a>
                             <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 text-black">
                                 <div v-for="auto of autos" class="card" style="width: 18rem;">
                                     <img :src="auto.imagen || 'https://img.freepik.com/vector-gratis/ilustracion-concepto-coche-delantero_114360-7978.jpg?w=2000'"
@@ -38,7 +38,7 @@
                                         <p class="card-text">{{auto.anio}} | {{auto.km}} km</p>
                                         <p class="card-text">{{auto.lugar}}</p>
                                         <p class="card-text">${{auto.precio}} </p>
-                                        <a class="btn btn-secondary" :href="'./templates/auto_update.html?id='+ auto.id">Editar</a>
+                                        <a class="btn btn-secondary" :href="'./auto_update.html?id='+ auto.id">Editar</a>
                                         <button type="button" class="btn btn-danger"
                                             v-on:click="eliminar(auto.id)">Eliminar</button>
                                     </div>
@@ -60,9 +60,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
         crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
+    <script src="./js/main.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script><!--Link de VUE-->
-    <script src="../js/autos.js"></script>
+    <script src="./js/autos.js"></script>
 </body>
 
 </html>
