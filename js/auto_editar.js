@@ -53,7 +53,7 @@ createApp({
             fetch(this.url, options)
                 .then(function () {
                     alert("Registro modificado")
-                    window.location.href = "../templates/autos.html";
+                    window.location.href = "../autos.html";
                 })
                 .catch(err => {
                     console.error(err);

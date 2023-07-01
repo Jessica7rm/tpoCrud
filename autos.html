@@ -38,7 +38,7 @@
                                         <p class="card-text">{{auto.anio}} | {{auto.km}} km</p>
                                         <p class="card-text">{{auto.lugar}}</p>
                                         <p class="card-text">${{auto.precio}} </p>
-                                        <a class="btn btn-secondary" :href="'./auto_update.html?id='+ auto.id">Editar</a>
+                                        <a class="btn btn-secondary" :href="'./templates/auto_update.html?id='+ auto.id">Editar</a>
                                         <button type="button" class="btn btn-danger"
                                             v-on:click="eliminar(auto.id)">Eliminar</button>
                                     </div>
