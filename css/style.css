@@ -25,3 +25,44 @@ img{
     height: 200px;
     object-fit: cover;
 }
+
+main{
+    padding-bottom: 2rem;
+}
+
+footer {
+    background-color: rgb(243, 120, 96);
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7rem;
+}
+
+.iconos img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2rem;
+}
+
+.ftext{
+  align-items: center;
+  text-align: center;
+  width: 65%;
+}
+
+@media (max-width:736px) {
+    .iconos img {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 0.5rem;
+    }
+    .ftext{
+        font-size: small;
+        width: 55%;
+    }
+  }
+
+  @media (max-width:316px) {
+    .iconos img {
+        margin-left: 0rem;
+      }
+  }

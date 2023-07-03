@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>Evento Nuevo</title>
+    <title>Modificar datos</title>
+    <link rel="shortcut icon" href="./img/icons8-coche-64.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS v5.2.1 -->
@@ -18,7 +19,7 @@
     <main>
         <div class="container formulario" id="app">
             <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
-                <h2>Editar Evento </h2>
+                <h2>Modificar datos</h2>
                 <div class="mb-3">
                     <label for="id">Id</label>
                     <input type="number" name="id" id="id" disabled v-model="id">
@@ -49,6 +50,7 @@
                     <img width="100" :src="imagen" alt="">
                 </div>
                 <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+                <a href="./index.html" class="btn btn-outline-secondary">Volver</a>
             </form>
         </div>
     </main>

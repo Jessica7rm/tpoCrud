@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="./img/icons8-coche-64.png" type="image/x-icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -27,30 +28,35 @@
                     <p>Cargando .....</p>
                 </section>
                 <section v-else>
-                        <div class="container text-white p-3">
-                            <a class="btn btn-primary" href="./auto_nuevo.html">Nuevo</a>
-                            <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 text-black">
-                                <div v-for="auto of autos" class="card" style="width: 18rem;">
-                                    <img :src="auto.imagen || 'https://img.freepik.com/vector-gratis/ilustracion-concepto-coche-delantero_114360-7978.jpg?w=2000'"
-                                        class="card-img-top" alt="Foto">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{auto.modelo}}</h5>
-                                        <p class="card-text">{{auto.anio}} | {{auto.km}} km</p>
-                                        <p class="card-text">{{auto.lugar}}</p>
-                                        <p class="card-text">${{auto.precio}} </p>
-                                        <a class="btn btn-secondary" :href="'./auto_update.html?id='+ auto.id">Editar</a>
-                                        <button type="button" class="btn btn-danger"
-                                            v-on:click="eliminar(auto.id)">Eliminar</button>
-                                    </div>
+                    <div class="container text-white p-3">
+                        <a class="btn btn-primary" href="./auto_nuevo.html">Nuevo</a>
+                        <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 text-black">
+                            <div v-for="auto of autos" class="card" style="width: 18rem;">
+                                <img :src="auto.imagen || 'https://img.freepik.com/vector-gratis/ilustracion-concepto-coche-delantero_114360-7978.jpg?w=2000'"
+                                    class="card-img-top" alt="Foto">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{auto.modelo}}</h5>
+                                    <p class="card-text">{{auto.anio}} | {{auto.km}} km</p>
+                                    <p class="card-text">{{auto.lugar}}</p>
+                                    <p class="card-text">${{auto.precio}} </p>
+                                    <a class="btn btn-outline-secondary" :href="'./auto_update.html?id='+ auto.id">Editar</a>
+                                    <button type="button" class="btn btn-outline-danger"
+                                        v-on:click="eliminar(auto.id)">Eliminar</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
     <footer>
-        <!-- place footer here -->
+        <div class="iconos">
+            <a href=""><img src="./img/instagram.png" alt="instagram"></a>
+            <a href=""><img src="./img/facebook.png" alt="facebook"></a>
+            <a href=""><img src="./img/whatsapp.png" alt="whatsapp"></a>
+        </div>
+             <p class="ftext">Jessica Huertas 2023 // iconos flaticon.com</p>
     </footer>
     <script>
         <!--Link de Bootstrap-->
