@@ -28,6 +28,7 @@
                     <p>Cargando .....</p>
                 </section>
                 <section v-else>
+                    <input type="texto" class="form-control" placeholder="Buscador por nombre" v-on:input="filtrarPorTexto()">
                     <div class="container text-white p-3">
                         <a class="btn btn-primary" href="./auto_nuevo.html">Nuevo</a>
                         <div class="d-flex justify-content-center align-items-center flex-wrap gap-4 text-black">

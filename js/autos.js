@@ -3,6 +3,8 @@ createApp({
     data() {
         return {
             autos: [],
+            backupAutos: [],
+            texto: '',
             //url:'http://localhost:5000/productos',
             // si el backend esta corriendo local usar localhost 5000(si no lo subieron a pythonanywhere)
             url: 'https://jessica7rm.pythonanywhere.com/autos', // si ya lo subieron a pythonanywhere
@@ -24,6 +26,7 @@ createApp({
                 .then(response => response.json())
                 .then(data => {
                     this.autos = data;
+                    this.backupAutos = this.autos
                     this.cargando = false
                 })
                 .catch(err => {
@@ -44,12 +47,12 @@ createApp({
         },
         grabar() {
             let auto = {
-                modelo:this.modelo,
-                precio:this.precio,
-                anio:this.anio,
-                km:this.km,
-                lugar:this.lugar,
-                imagen:this.imagen
+                modelo: this.modelo,
+                precio: this.precio,
+                anio: this.anio,
+                km: this.km,
+                lugar: this.lugar,
+                imagen: this.imagen
             }
             var options = {
                 body: JSON.stringify(auto),
@@ -66,6 +69,11 @@ createApp({
                     console.error(err);
                     alert("Error al Grabarr")
                 })
+        },
+        filtrarPorTexto() {
+            let texto = document.querySelector('input').value
+            console.log(texto);
+            this.autos = this.backupAutos.filter(auto => auto.modelo.toLowerCase().includes(texto.toLowerCase()))
         }
     },
     created() {
