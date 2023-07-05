@@ -30,11 +30,18 @@ main{
     padding-bottom: 2rem;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 footer {
     background-color: rgb(243, 120, 96);
     display: flex;
     justify-content: space-around;
     padding: 0.7rem;
+    margin-top: auto;
 }
 
 .iconos img {
